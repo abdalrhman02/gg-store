@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Colors */
+.arabic-font {
+  font-family: "Alexandria";
+}
+
+.hebrew-font {
+  font-family: "Secular One";
+}
+
+@font-face {
+  font-family: "Retro Gaming";
+  src: local("Retro Gaming"), url("../../Fonts/Retro Gaming.ttf") format("opentype"), url("../../Fonts/ArabicPixel.ttf") format("opentype");
+}
+body {
+  background-color: #18603d;
+  font-family: "Retro Gaming";
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  padding: 0 70px;
+}
+
+/* Scrollbar Styling */
+body::-webkit-scrollbar {
+  width: 0.8em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #00d16c;
+  outline: 1px solid #18603d;
+}
+
+.disNone {
+  display: none;
+}
+
+.disBlock {
+  display: block;
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+button:hover {
+  background-color: #027a40;
+  cursor: pointer;
+}
+
+/* Every Main Title */
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  text-transform: uppercase;
+  margin-top: 3em;
+  text-align: center;
+}
+.title h1 {
+  position: relative;
+  margin-bottom: 20px;
+}
+.title h1::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 50%;
+  background-color: #00d16c;
+}
+
+@media (max-width: 800px) {
+  .title h1 {
+    font-size: 28px;
+  }
+  .title p {
+    font-size: 14px;
+  }
+}
+/* Shadow (Like in the footer) */
+.buyers {
+  margin: 4em 7em;
+  height: 82em;
+}
+.buyers .buyer {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #FFF;
+  padding: 0.5em 0.7em;
+  border-radius: 15px;
+  margin-bottom: 2.5em;
+}
+.buyers .buyer img {
+  width: 40em;
+  border-radius: 15px;
+}
+.buyers .buyer .number {
+  position: absolute;
+  top: -3em;
+  left: 2em;
+  background-color: #FFF;
+  width: 3.6em;
+  height: 4em;
+  color: #00d16c;
+  z-index: -1;
+}
+.buyers .buyer .number h1 {
+  font-size: 2.6em;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
+.buyers .buyer .pacmanGifs {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: -3.5em;
+  left: 9em;
+}
+.buyers .buyer .pacmanGifs img {
+  width: 3.5em;
+}
+.buyers .buyer .pacmanGifs .pacmanGif {
+  margin-right: 2em;
+}
+.buyers .buyer .gifs {
+  position: absolute;
+  width: 7em;
+}
+.buyers .buyer .zeldaGif {
+  top: -6em;
+  right: 8em;
+}
+.buyers .buyer .luigiGif {
+  top: -5.2em;
+  left: 8em;
+}
+.buyers .buyer .sonicGif {
+  top: -8em;
+  right: 10em;
+}
+.buyers .buyer .ryuGif {
+  width: 22em;
+  top: -9.4em;
+  left: 10em;
+}
+.buyers .left {
+  float: left;
+}
+.buyers .right {
+  float: right;
+}
+.buyers .right .number {
+  left: 36em;
+}
+
+@media (max-width: 1000px) {
+  .buyers .buyer img {
+    width: 36em;
+  }
+  .buyers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .buyers .buyer .number {
+    top: 1em;
+    left: -3.6em;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+  }
+  .buyers .right .number {
+    left: 100%;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  /* The Gifs */
+  .buyers .buyer .ryuGif {
+    top: 9em;
+  }
+  .buyers .buyer .sonicGif {
+    top: -6em;
+    right: -2em;
+    width: 6em;
+  }
+}
+@media (max-width: 850px) {
+  .buyers {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .buyers .buyer img {
+    width: 27em;
+  }
+  .buyers .buyer .number {
+    font-size: 14px;
+  }
+  /* Gifs */
+  .buyers .buyer .pacmanGifs {
+    top: -2.5em;
+  }
+  .buyers .buyer .pacmanGifs img {
+    width: 2.5em;
+  }
+  .buyers .buyer .sonicGif {
+    top: -4em;
+    width: 4.5em;
+  }
+  .buyers .buyer .ryuGif {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .buyers .buyer img {
+    width: 24em;
+  }
+  .buyers .buyer .number {
+    font-size: 13px;
+  }
+}/*# sourceMappingURL=buyers.css.map */

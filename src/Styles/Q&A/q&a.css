@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Colors */
+.arabic-font {
+  font-family: "Alexandria";
+}
+
+.hebrew-font {
+  font-family: "Secular One";
+}
+
+@font-face {
+  font-family: "Retro Gaming";
+  src: local("Retro Gaming"), url("../../Fonts/Retro Gaming.ttf") format("opentype"), url("../../Fonts/ArabicPixel.ttf") format("opentype");
+}
+body {
+  background-color: #18603d;
+  font-family: "Retro Gaming";
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  padding: 0 70px;
+}
+
+/* Scrollbar Styling */
+body::-webkit-scrollbar {
+  width: 0.8em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #00d16c;
+  outline: 1px solid #18603d;
+}
+
+.disNone {
+  display: none;
+}
+
+.disBlock {
+  display: block;
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+button:hover {
+  background-color: #027a40;
+  cursor: pointer;
+}
+
+/* Every Main Title */
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  text-transform: uppercase;
+  margin-top: 3em;
+  text-align: center;
+}
+.title h1 {
+  position: relative;
+  margin-bottom: 20px;
+}
+.title h1::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 50%;
+  background-color: #00d16c;
+}
+
+@media (max-width: 800px) {
+  .title h1 {
+    font-size: 28px;
+  }
+  .title p {
+    font-size: 14px;
+  }
+}
+/* Shadow (Like in the footer) */
+.questions-Answers {
+  display: flex;
+  justify-content: center;
+  margin: 2em 12em;
+  background-color: #FFF;
+  border-radius: 8px;
+}
+.questions-Answers .questions {
+  width: 40%;
+  border-right: 1px solid #9b9b9b;
+}
+.questions-Answers .questions h3 {
+  background-color: #e7e7e7;
+  padding: 20px 15px;
+  font-size: 20px;
+}
+.questions-Answers .questions .question {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #FFF;
+  padding: 0.6em 1em;
+  border-bottom: 1px solid #e7e7e7;
+  cursor: pointer;
+}
+.questions-Answers .questions .question .image {
+  margin-right: 8px;
+}
+.questions-Answers .questions .question .image img {
+  width: 4.2em;
+  border-radius: 50%;
+}
+.questions-Answers .questions .question .theQ .name {
+  font-size: 18px;
+}
+.questions-Answers .questions .question .theQ .msg {
+  font-size: 13px;
+  color: #5b5a5a;
+}
+.questions-Answers .questions .question .msgTime {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 11px;
+  font-weight: normal;
+  color: #5b5a5a;
+}
+.questions-Answers .answers {
+  width: 60%;
+}
+.questions-Answers .answers .answer {
+  display: none;
+}
+.questions-Answers .answers .answer .profile {
+  display: flex;
+  align-items: center;
+  padding: 0.18em 1em;
+  background-color: #e7e7e7;
+}
+.questions-Answers .answers .answer .profile .image {
+  margin-right: 10px;
+}
+.questions-Answers .answers .answer .profile .image img {
+  width: 3.5em;
+  border-radius: 50%;
+}
+.questions-Answers .answers .answer .username {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.questions-Answers .answers .answer .username h4 {
+  font-weight: normal;
+  font-size: 12px;
+}
+.questions-Answers .answers .msgs {
+  position: relative;
+  height: 28em;
+  background-image: url(../../images/q&a_images/msgsBackground.png);
+  background-size: cover;
+  padding-top: 12px;
+}
+.questions-Answers .answers .msgs::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.questions-Answers .answers .msgs .msg {
+  position: relative;
+  background-color: white;
+  z-index: 1;
+  width: 50%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 12px;
+  border-radius: 7px;
+  padding: 7px 10px;
+}
+.questions-Answers .answers .msgs .msg .theMsg {
+  font-size: 14px;
+  font-weight: normal;
+  max-width: 21em;
+}
+.questions-Answers .answers .msgs .msg .timeMsgSent {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  font-size: 12px;
+  color: #5b5a5a;
+}
+.questions-Answers .answers .msgs .msg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-top: 15px solid #FFF;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+.questions-Answers .answers .msgs .userMsg {
+  margin-left: 20px;
+}
+.questions-Answers .answers .msgs .userMsg::before {
+  left: -8px;
+}
+.questions-Answers .answers .msgs .myMsg {
+  float: right;
+  margin-right: 20px;
+}
+.questions-Answers .answers .msgs .myMsg::before {
+  right: -8px;
+}
+.questions-Answers .answers .sentMsg {
+  display: flex;
+  align-items: center;
+  height: 4em;
+  margin: 0 0.7em;
+}
+.questions-Answers .answers .sentMsg button {
+  background-color: #00cc69;
+  color: #FFF;
+  width: 5em;
+  height: 1.8em;
+}
+.questions-Answers .answers .sentMsg input {
+  height: 2.5em;
+  margin-left: 9px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  outline: none;
+  width: 100%;
+}
+
+footer {
+  margin-top: 5em;
+}
+
+@media (max-width: 1250px) {
+  .questions-Answers {
+    margin: 2em 5em;
+  }
+}
+@media (max-width: 1000px) {
+  .questions-Answers {
+    flex-direction: column;
+    align-items: center;
+  }
+  .questions-Answers .questions {
+    width: 100%;
+  }
+  .questions-Answers .answers {
+    width: 100%;
+  }
+}/*# sourceMappingURL=q&a.css.map */

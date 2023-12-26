@@ -1,0 +1,172 @@
+@import '../../Styles/GlobalRules/globalRules';
+
+.buyers {
+    margin: 4em 7em;
+    height: 82em;
+
+    .buyer {
+        position: relative;
+        width: fit-content;
+        background-color: #FFF;
+        padding: 0.5em 0.7em;
+        border-radius: 15px;
+        margin-bottom: 2.5em;
+
+        img {
+            width: 40em;
+            border-radius: 15px;
+        }
+
+        .number {
+            position: absolute;
+            top: -3em;
+            left: 2em;
+            background-color: #FFF;
+            width: 3.6em;
+            height: 4em;
+            color: #00d16c;
+            z-index: -1;
+
+            h1 {
+                font-size: 2.6em;
+                position: absolute;
+                left: 50%;
+                top: 45%;
+                transform: translate(-50%,-50%);
+            }
+        }
+
+
+        .pacmanGifs {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: -3.5em;
+            left: 9em;
+
+            img {
+                width: 3.5em;
+            }
+
+            .pacmanGif {
+                margin-right: 2em;
+            }
+        }
+
+        .gifs {
+            position: absolute;
+            width: 7em;
+        }
+        .zeldaGif {
+            top: -6em;
+            right: 8em;
+        }
+        .luigiGif {
+            top: -5.2em;
+            left: 8em;
+        }
+        .sonicGif {
+            top: -8em;
+            right: 10em;
+        }
+        .ryuGif {
+            width: 22em;
+            top: -9.4em;
+            left: 10em;
+        }
+    }
+
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+
+        .number {
+            left: 36em
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .buyers .buyer img {
+        width: 36em;
+    }
+
+    .buyers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buyers .buyer .number {
+        top: 1em;
+        left: -3.6em;
+        border-top-left-radius: 13px;
+        border-bottom-left-radius: 13px;
+    }
+
+    .buyers .right .number {
+        left: 100%;
+        border-top-right-radius: 13px;
+        border-bottom-right-radius: 13px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    /* The Gifs */
+    .buyers .buyer .ryuGif {
+        top: 9em;
+    }   
+    .buyers .buyer .sonicGif {
+        top: -6em;
+        right: -2em;
+        width: 6em;
+    }
+}
+
+
+@media (max-width: 850px) {
+    .buyers {
+        height: fit-content;
+    }
+
+    .buyers .buyer img {
+        width: 27em
+    }
+
+    .buyers .buyer .number {
+        font-size: 14px
+    }
+
+
+    /* Gifs */
+    .buyers .buyer .pacmanGifs {
+        top: -2.5em
+    }
+    .buyers .buyer .pacmanGifs img {
+        width: 2.5em
+    }
+
+    .buyers .buyer .sonicGif {
+        top: -4em;
+        width: 4.5em;
+    }
+
+    .buyers .buyer .ryuGif {
+        display: none
+    }
+}
+
+
+@media (max-width: 600px) {
+    .buyers .buyer img {
+        width: 24em
+    }
+
+    .buyers .buyer .number {
+        font-size: 13px
+    }
+}

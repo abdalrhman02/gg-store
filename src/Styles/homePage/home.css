@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Colors */
+.arabic-font {
+  font-family: "Alexandria";
+}
+
+.hebrew-font {
+  font-family: "Secular One";
+}
+
+@font-face {
+  font-family: "Retro Gaming";
+  src: local("Retro Gaming"), url("../../Fonts/Retro Gaming.ttf") format("opentype"), url("../../Fonts/ArabicPixel.ttf") format("opentype");
+}
+body {
+  background-color: #18603d;
+  font-family: "Retro Gaming";
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  padding: 0 70px;
+}
+
+/* Scrollbar Styling */
+body::-webkit-scrollbar {
+  width: 0.8em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #00d16c;
+  outline: 1px solid #18603d;
+}
+
+.disNone {
+  display: none;
+}
+
+.disBlock {
+  display: block;
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+button:hover {
+  background-color: #027a40;
+  cursor: pointer;
+}
+
+/* Every Main Title */
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  text-transform: uppercase;
+  margin-top: 3em;
+  text-align: center;
+}
+.title h1 {
+  position: relative;
+  margin-bottom: 20px;
+}
+.title h1::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 50%;
+  background-color: #00d16c;
+}
+
+@media (max-width: 800px) {
+  .title h1 {
+    font-size: 28px;
+  }
+  .title p {
+    font-size: 14px;
+  }
+}
+/* Shadow (Like in the footer) */
+.landing {
+  position: relative;
+  background-image: url(../../images/Backgrounds/landingBackground.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+  width: 100%;
+}
+.landing::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 90vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.632);
+}
+.landing .landingDiv {
+  position: relative;
+  color: #fff;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.landing .landingDiv h1 {
+  position: relative;
+  font-size: 35px;
+  margin-bottom: 30px;
+  width: 80%;
+}
+.landing .landingDiv h1::after {
+  content: "";
+  height: 3px;
+  width: 50%;
+  background-color: #00d16c;
+  position: absolute;
+  bottom: -0.5em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.landing .landingDiv p {
+  font-size: 21px;
+}
+.landing .landingDiv button {
+  background-color: #00d16c;
+  color: #FFF;
+  margin-top: 25px;
+  width: 8em;
+  height: 2.5em;
+}
+.landing .arrowDown {
+  position: absolute;
+  width: 6em;
+  left: 50%;
+  bottom: 0.5em;
+  transform: translateX(-50%);
+  animation: arrowDown 0.5s infinite ease-in;
+  cursor: pointer;
+  z-index: 1;
+}
+@keyframes arrowDown {
+  0% {
+    bottom: 0.5em;
+  }
+  50% {
+    bottom: 0.3em;
+  }
+  100% {
+    bottom: 0.6em;
+  }
+}
+
+.shopSection {
+  padding: 4em 0;
+}
+@media (max-width: 1000px) {
+  .shopSection .products {
+    flex-direction: column;
+    gap: 2em;
+    margin: 2em 0;
+  }
+  .shopSection .products .product {
+    width: 50%;
+  }
+}
+@media (max-width: 700px) {
+  .shopSection .products .product {
+    width: 80%;
+  }
+}
+
+.aboutSection {
+  padding: 5em 0;
+}
+.aboutSection .container {
+  margin-top: 3em 0 2em;
+}
+.aboutSection .container .about-us {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #EEE;
+  color: #222;
+  padding: 4em 3em;
+  width: 85%;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.aboutSection .container .about-us .text {
+  width: 70%;
+}
+.aboutSection .container .about-us .text h3 {
+  margin: 10px 0 20px;
+  color: #00d16c;
+}
+.aboutSection .container .about-us .text p {
+  max-width: 700px;
+  word-wrap: break-word;
+  line-height: 1.6em;
+}
+.aboutSection .container .about-us .image {
+  width: 30%;
+  position: relative;
+}
+.aboutSection .container .about-us .image img {
+  width: 15em;
+  position: absolute;
+  bottom: -11.6em;
+  left: 3em;
+}
+.aboutSection .container .about-us .gif {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .landing .landingDiv h1 {
+    font-size: 30px;
+    width: 100%;
+  }
+  .landing .landingDiv p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 850px) {
+  .aboutSection .container .about-us {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .aboutSection .container .about-us .text {
+    width: 100%;
+  }
+  .aboutSection .container .about-us .image {
+    display: none;
+  }
+  .aboutSection .container .about-us .gif {
+    display: block;
+  }
+}/*# sourceMappingURL=home.css.map */

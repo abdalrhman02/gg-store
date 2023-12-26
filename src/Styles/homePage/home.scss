@@ -1,0 +1,198 @@
+
+@import '../../Styles/GlobalRules/globalRules';
+
+.landing {
+    position: relative;
+    background-image: url(../../images/Backgrounds/landingBackground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+    width: 100%;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 90vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.632)
+    }
+
+
+    .landingDiv {
+        position: relative;
+        color: #fff;
+        left: 50%;
+        top: 45%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        h1 {
+            position: relative;
+            font-size: 35px;
+            margin-bottom: 30px;
+            width: 80%;
+
+            &::after {
+                content: "";
+                height: 3px;
+                width: 50%;
+                background-color: $main-color;
+                position: absolute;
+                bottom: -0.5em;
+                left: 50%;
+                transform: translateX(-50%);
+
+
+            }
+        }
+
+        p {
+            font-size: 21px
+        }
+
+        button {
+            background-color: $main-color;
+            color: #FFF;
+            margin-top: 25px;
+            width: 8em;
+            height: 2.5em;
+        }
+    }
+
+
+    .arrowDown {
+        position: absolute;
+        width: 6em;
+        left: 50%;
+        bottom: 0.5em;
+        transform: translateX(-50%);
+        animation: arrowDown 0.5s infinite ease-in;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    @keyframes arrowDown {
+        0%{bottom: 0.5em}
+        50%{bottom: 0.3em}
+        100%{bottom: 0.6em}
+    }
+}
+
+
+.shopSection {
+    padding: 4em 0;
+
+    @media (max-width: 1000px) {
+        .products {
+            flex-direction: column;
+            gap: 2em;
+            margin: 2em 0
+        }
+    
+        .products .product {
+            width: 50%
+        }
+    }
+
+    @media (max-width: 700px) { 
+        .products .product {
+            width: 80%
+        }
+    }
+}
+
+
+
+.aboutSection {
+    padding: 5em 0;
+
+    .container {
+        margin-top: 3em 0 2em;
+
+        .about-us {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #EEE;
+            color: $dark-color;
+            padding: 4em 3em;
+            width: 85%;
+            border-radius: 30px;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 0;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+
+            .text {
+                width: 70%;
+                h3 {
+                    margin: 10px 0 20px;
+                    color: $main-color;
+                }
+
+                p {
+                    max-width: 700px;
+                    word-wrap: break-word;
+                    line-height: 1.6em;
+                }
+            }
+
+            .image {
+                width: 30%;
+                position: relative;
+                img {
+                    width: 15em;
+                    position: absolute;
+                    bottom: -11.6em;
+                    left: 3em;
+                }
+            }
+
+            .gif {
+                display: none
+            }
+        }
+    }
+    
+}
+
+
+
+@media (max-width: 650px) {
+    .landing .landingDiv h1 {
+        font-size: 30px;
+        width: 100%;
+    }
+
+    .landing .landingDiv p {
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 850px) {
+    .aboutSection .container .about-us {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .aboutSection .container .about-us .text {
+        width: 100%;
+    }
+
+    .aboutSection .container .about-us .image {
+        display: none;
+    }
+
+    .aboutSection .container .about-us .gif {
+        display: block;
+    }
+}

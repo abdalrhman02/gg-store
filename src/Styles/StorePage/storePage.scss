@@ -1,0 +1,28 @@
+
+@import '../../Styles/GlobalRules/globalRules';
+
+
+.store {
+
+    .products {
+        margin-top: 2em;
+    }
+
+    @media (max-width: 1000px) {
+        .products {
+            flex-direction: column;
+            gap: 2em;
+            margin: 2em 0
+        }
+    
+        .products .product {
+            width: 50%
+        }
+    }
+
+    @media (max-width: 700px) { 
+        .products .product {
+            width: 80%
+        }
+    }
+}
