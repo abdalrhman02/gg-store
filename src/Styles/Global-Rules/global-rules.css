@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Retro Gaming";
+}
+
+:root {
+  --f-color: #00b45d;
+  --s-color: #03743c;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.container {
+  padding: 0 130px;
+}
+
+.disNone {
+  display: none;
+}
+
+.disBlock {
+  display: block;
+}
+
+.disFlex {
+  display: flex;
+}
+
+@font-face {
+  font-family: "Retro Gaming";
+  src: url("../../Fonts//Retro Gaming.ttf"), url("../../Fonts/Arabic Pixel 2.ttf");
+}/*# sourceMappingURL=global-rules.css.map */

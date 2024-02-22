@@ -1,0 +1,55 @@
+
+.landing {
+    background-image: url('../../Images/landBackground.jpg');
+    background-size: cover;
+
+    .container {
+        position: relative;
+        height: 47em;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .landingContent {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: #FFF;
+            text-align: center;
+
+            h2 {
+                font-size: 3em;
+            }
+
+            p {
+                font-size: 23px;
+                margin: 15px 0;
+            }
+
+            button {
+                width: 8em;
+                height: 2.4em;
+                font-size: 18px;
+                text-transform: uppercase;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                color: #FFF;
+                background-color: var(--f-color);
+
+                &:hover {
+                    opacity: .9;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
