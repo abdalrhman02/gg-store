@@ -10,15 +10,16 @@ header {
         justify-content: space-between;
         height: 100%;
 
-        .logo {
-
-            img {
-                width: 8em
-            }
-        }
-
-        nav {
+        .left {
             display: flex;
+            align-items: center;
+
+            .logo {
+                margin-right: 1em;
+                img {
+                    width: 8em
+                }
+            }
 
             ul {
                 display: flex;
@@ -29,11 +30,11 @@ header {
                     color: #FFF
                 }
             }
+        }
 
-            .insta-icon {
-                width: 2em;
-                margin-left: 15px
-            }
+        .right {
+            display: flex;
+            align-items: center;
 
             .changeLang {
                 display: flex;
@@ -77,6 +78,27 @@ header {
                     }
                 }
             }
+
+            .shopping-cart {
+                margin: 0 15px;
+
+                .shopping-cart-img {
+                    width: 30px;
+                    padding-top: 8px
+                }
+            }
+
+            .btn {
+                background-color: var(--t-color);
+                width: 6em;
+                height: 2.5em;
+
+                &:hover {
+                    background-color: var(--t-color);
+                }
+            }
         }
+
+
     }
 }

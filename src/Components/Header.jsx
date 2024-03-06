@@ -29,20 +29,21 @@ function Header() {
     return (
         <header>
             <div className="container">
-                <div className="logo">
-                    <img src={require('../Images/logoNoBackground.png')} />
+                <div className='left'>
+                    <div className="logo">
+                        <img src={require('../Images/logoNoBackground.png')} />
+                    </div>
+
+                    <ul>
+                        <a href="/"><li>{t("headerLink1")}</li></a>
+                        <a href="Store"><li>{t("headerLink2")}</li></a>
+                        <a href="#"><li>{t("headerLink3")}</li></a>
+                        <a href="#"><li>{t("headerLink4")}</li></a>
+                    </ul>
                 </div>
 
-                <nav>
-                    <ul>
-                        <a href="#"><li>{t("headerNav1")}</li></a>
-                        <a href="#"><li>{t("headerNav2")}</li></a>
-                        <a href="#"><li>{t("headerNav3")}</li></a>
-                        <a href="#"><li>{t("headerNav4")}</li></a>
-                    </ul>
-
-                    {/* <a href="#"><img src={require('../Images/Icons/instagram.png')} className='insta-icon' /></a> */}
-                    <div className='changeLang' onClick={openLang}>
+                <div className='right'>
+                <div className='changeLang' onClick={openLang}>
                         <img src={require('../Images/Icons/down-arrow.png')} className='downArrow-icon' />
                         <img src={require('../Images/Icons/global.png')} className='global-icon' />
 
@@ -51,7 +52,11 @@ function Header() {
                             <button onClick={changeAR}>العربية</button>
                         </div>
                     </div>
-                </nav>
+
+                    <a href="#" className='shopping-cart'><img className='shopping-cart-img' src={require('../Images/Icons/shopping-cart.png')} /></a>
+                    <button className='btn'>Login</button>
+                </div>
+
             </div>
         </header>
     )
