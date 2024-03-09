@@ -34,7 +34,6 @@ function Home() {
               productCardFirstFeature={t("productCardFirstFeature1")}
               productCardSecondFeature={t("productCardSecondFeature1")}
               productCardThirdFeature={t("productCardThirdFeature1")}
-              productCardBtn={t("productCardBtn")}
             />
 
             <ProductCard 
@@ -43,7 +42,6 @@ function Home() {
               productCardFirstFeature={t("productCardFirstFeature2")}
               productCardSecondFeature={t("productCardSecondFeature2")}
               productCardThirdFeature={t("productCardThirdFeature2")}
-              productCardBtn={t("productCardBtn")}
             />
 
             <ProductCard 
@@ -52,7 +50,6 @@ function Home() {
               productCardFirstFeature={t("productCardFirstFeature3")}
               productCardSecondFeature={t("productCardSecondFeature3")}
               productCardThirdFeature={t("productCardThirdFeature3")}
-              productCardBtn={t("productCardBtn")}
             />
           </div>
           <a href="Store"><button className='btn moreProductsBtn'>{t("moreProductBtn")}</button></a>
